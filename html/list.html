@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lista Familias</title>
+        <link href="css/form.css" rel="stylesheet" type="text/css" media="screen"/>
+    </head>
+    <body>
+        {nome_familia}
+        {mostra_familia}
+        <form method='POST' action='familia_list.php?action=create'>
+            <input type='text' readonly='1' name='nome_familia' value='{nome_familia}'>
+            <label>Nome</label>
+            <input type='text' name='nome'>
+            <label>Idade</label>
+            <input type='text' name='idade'>
+            <label>Parentesco</label>
+            <select name='parentesco' >
+                <option value='pai/mae'>Pai/Mãe</option> 
+                <option value='neto/neta'>Neto/Neta</option> 
+            </select>
+            <input type='submit'>
+        </form>
+    </body>
+</html>
